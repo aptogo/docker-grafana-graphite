@@ -69,7 +69,7 @@ RUN     chown -R www-data /opt/graphite/storage
 RUN     chmod 0775 /opt/graphite/storage /opt/graphite/storage/whisper
 RUN     chmod 0664 /opt/graphite/storage/graphite.db
 RUN     cd /opt/graphite/webapp/graphite && python manage.py syncdb --noinput
-RUN     mkdir -p /opt/graphite/storage/log/webapp && chmod 0775 mkdir -p /opt/graphite/storage/log/webapp
+RUN     mkdir -p /opt/graphite/storage/log/webapp && chmod 0775 /opt/graphite/storage/log/webapp
 
 # Configure Grafana
 ADD     ./grafana/custom.ini /opt/grafana/conf/custom.ini
